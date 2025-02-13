@@ -35,5 +35,19 @@ with col2:
 with col3:
     st.markdown("[Follow us on Instagram](https://instagram.com/example)")
 
+# Feedback Section
+st.markdown("---")
+st.subheader("📝 We Value Your Feedback")
+feedback = st.text_area("Please share your thoughts or suggestions to improve our platform:")
+if st.button("Submit Feedback"):
+    st.success("Thank you for your valuable feedback!")
+
+# Newsletter Subscription
+st.markdown("---")
+st.subheader("📬 Subscribe to Our Newsletter")
+email = st.text_input("Enter your email to stay updated:")
+if st.button("Subscribe"):
+    st.success(f"Subscribed successfully with email: {email}")
+
 st.markdown("---")
 st.write("Empowering Learners, Transforming Futures")
