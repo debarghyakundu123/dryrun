@@ -8,6 +8,7 @@ st.image("home.jpg", caption="Empowering Education Through Technology", use_colu
 st.write("Explore our curated selection of courses and connect with us on social media.")
 
 # Courses Section
+st.markdown("---")
 st.subheader("📖 Available Courses")
 courses = {
     "Railway Science Foundation": "https://t.me/+Ja5IJyCmnMVkM2Vl",
@@ -16,13 +17,20 @@ courses = {
     "Web Development": "https://example.com/webdev"
 }
 
-for course, link in courses.items():
-    st.markdown(f"- [{course}]({link})")
+col1, col2 = st.columns(2)
 
-# Divider
-st.markdown("---")
+with col1:
+    for i, (course, link) in enumerate(courses.items()):
+        if i % 2 == 0:
+            st.markdown(f"- [{course}]({link})")
+
+with col2:
+    for i, (course, link) in enumerate(courses.items()):
+        if i % 2 != 0:
+            st.markdown(f"- [{course}]({link})")
 
 # Social Media Section
+st.markdown("---")
 st.subheader("📢 Stay Connected")
 col1, col2, col3 = st.columns(3)
 
@@ -34,20 +42,6 @@ with col2:
 
 with col3:
     st.markdown("[Follow us on Instagram](https://instagram.com/example)")
-
-# Feedback Section
-st.markdown("---")
-st.subheader("📝 We Value Your Feedback")
-feedback = st.text_area("Please share your thoughts or suggestions to improve our platform:")
-if st.button("Submit Feedback"):
-    st.success("Thank you for your valuable feedback!")
-
-# Newsletter Subscription
-st.markdown("---")
-st.subheader("📬 Subscribe to Our Newsletter")
-email = st.text_input("Enter your email to stay updated:")
-if st.button("Subscribe"):
-    st.success(f"Subscribed successfully with email: {email}")
 
 st.markdown("---")
 st.write("Empowering Learners, Transforming Futures")
