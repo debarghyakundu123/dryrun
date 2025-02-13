@@ -11,7 +11,8 @@ courses = {
     "Railway Science Foundation": "https://t.me/+Ja5IJyCmnMVkM2Vl",
     "CGL + CHSL + MTS MAINS": "https://t.me/+DumAzg8tD3I5NDc1",
     "Machine Learning Basics": "https://example.com/ml",
-    "Web Development": "https://example.com/webdev"
+    "Web Development": "https://example.com/webdev",
+    "gate data science":"https://example.com/webdev"
 }
 
 for course, link in courses.items():
