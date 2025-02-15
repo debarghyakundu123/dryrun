@@ -19,7 +19,8 @@ st.image("home.jpg", caption="Welcome to the Education Platform", use_column_wid
 
 
 for course, link in courses.items():
-    st.markdown(f"[🔗 {course}]({link})")
+    st.markdown(f"- {course}")
+
 
 st.write("### 📢 Connect with us on Social Media")
 st.markdown("[📢 Join our Telegram](https://t.me/+XuIEiecTujMxODNl)")
